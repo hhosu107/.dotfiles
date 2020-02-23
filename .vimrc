@@ -153,6 +153,19 @@ try
   Plug 'tpope/vim-sensible'
   Plug 'vim-utils/vim-interruptless'
 
+  " IDE
+  if v:version >= 800 && has("python3")
+    Plug 'ncm2/ncm2'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
+  if v:version >= 800
+    Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh' }
+    Plug 'junegunn/fzf'
+  endif
+
   " Visual
   Plug 'vim-airline/vim-airline'
   Plug 'nathanaelkane/vim-indent-guides'
@@ -195,6 +208,25 @@ endtry
 " Configs for plugins
 "
 if exists('s:has_vimplug') && s:has_vimplug
+  " ncm2
+  if v:version >= 800 && has("python3")
+    set completeopt=noinsert,menuone,noselect
+    set shortmess+=c " Turn off completion messages
+    autocmd BufEnter * call ncm2#enable_for_buffer()
+  endif
+
+  " LanguageClient-neovim
+  if v:version >= 800
+    set hidden
+    set signcolumn=yes
+
+    let g:LanguageClient_serverCommands = {
+      \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'] } " Requires rust-analysis, rust-src, rls
+    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+    nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  endif
+
   " vim-indent-guides
   nmap <leader>i <Plug>IndentGuidesToggle
   let g:indent_guides_auto_colors = 0
