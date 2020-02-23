@@ -153,6 +153,12 @@ try
   Plug 'tpope/vim-sensible'
   Plug 'vim-utils/vim-interruptless'
 
+  " IDE
+  if v:version >= 800
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neoclide/coc-rls', {'do': 'yarn install --frozen-lockfile'}
+  endif
+
   " Visual
   Plug 'vim-airline/vim-airline'
   Plug 'nathanaelkane/vim-indent-guides'
@@ -195,6 +201,14 @@ endtry
 " Configs for plugins
 "
 if exists('s:has_vimplug') && s:has_vimplug
+  " coc.nvim
+  if v:version >= 800
+    set hidden
+    set completeopt=noinsert,menuone,noselect
+    set shortmess+=c " Turn off completion messages
+    set signcolumn=yes
+  endif
+
   " vim-indent-guides
   nmap <leader>i <Plug>IndentGuidesToggle
   let g:indent_guides_auto_colors = 0
