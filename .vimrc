@@ -153,6 +153,15 @@ try
   Plug 'tpope/vim-sensible'
   Plug 'vim-utils/vim-interruptless'
 
+  " IDE
+  Plug 'lifepillar/vim-mucomplete'
+  if v:version >= 800
+    Plug 'autozimu/LanguageClient-neovim', {
+      \ 'branch': 'next',
+      \ 'do': 'bash install.sh' }
+    Plug 'junegunn/fzf'
+  endif
+
   " Visual
   Plug 'vim-airline/vim-airline'
   Plug 'nathanaelkane/vim-indent-guides'
@@ -195,6 +204,24 @@ endtry
 " Configs for plugins
 "
 if exists('s:has_vimplug') && s:has_vimplug
+  " vim-mucomplete
+  set completeopt=noinsert,menuone,noselect
+  set shortmess+=c " Turn off completion messages
+  let g:mucomplete#enable_auto_at_startup = 1
+  let g:mucomplete#completion_delay = 1
+
+  " LanguageClient-neovim
+  if v:version >= 800
+    set hidden
+    set signcolumn=yes
+
+    let g:LanguageClient_serverCommands = {
+      \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'] } " Requires rust-analysis, rust-src, rls
+    nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+    nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
+    nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
+  endif
+
   " vim-indent-guides
   nmap <leader>i <Plug>IndentGuidesToggle
   let g:indent_guides_auto_colors = 0
