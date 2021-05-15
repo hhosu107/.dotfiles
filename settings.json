@@ -3,12 +3,11 @@
 //
 // This file resides at "%LocalAppData%\Microsoft\Windows Terminal". Sync with the
 // commands below:
-//     cp ~/.dotfiles/settings.json /mnt/c/Users/simna/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
-//     cp /mnt/c/Users/simna/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json ~/.dotfiles/settings.json
+//     cp ~/.dotfiles/settings.json /mnt/c/Users/hhosu/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+//     cp /mnt/c/Users/hhosu/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json ~/.dotfiles/settings.json
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "defaultProfile": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-
+    "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
     "profiles": {
         "defaults": {
             "fontFace": "CaskaydiaCove NF",
@@ -16,13 +15,12 @@
         },
         "list": [
             {
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
                 "hidden": false,
-                "name": "Arch",
-                "icon": "ms-appdata:///roaming/arch.png",
+                "name": "Debian",
                 "source": "Windows.Terminal.Wsl",
                 "cursorShape": "filledBox",
-                "startingDirectory": "//wsl$/Arch/home/simnalamburt"
+                "startingDirectory": "//wsl$/Debian/home/charlese"
             },
             {
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",

@@ -24,8 +24,8 @@ Using Arch Linux in WSL2
     #
     # Create a new user
     #
-    useradd -m -G wheel -s /bin/bash simnalamburt
-    passwd simnalamburt
+    useradd -m -G wheel -s /bin/bash charlese
+    passwd charlese
 
 
     #
@@ -53,7 +53,7 @@ Using Arch Linux in WSL2
 3.  Change the default user
 
     ```powershell
-    arch.exe config --default-user simnalamburt
+    arch.exe config --default-user charlese
     ```
 
 4.  (Optional) Create handy symlinks

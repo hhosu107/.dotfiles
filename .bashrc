@@ -7,6 +7,7 @@
 stty stop undef
 stty -ixon
 
+export GPG_TTY=$(TTY)
 
 #
 # History Options

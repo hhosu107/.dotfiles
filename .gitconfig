@@ -1,8 +1,8 @@
 # vim: noexpandtab sw=8
 [user]
-	name = Hyeon Kim
-	email = simnalamburt@gmail.com
-	signingkey = 0F85F46EE242057F
+	name = Chansu Park
+	email = hhosu107@gmail.com
+	signingkey = 40BA1C90C70C5C39
 [core]
 	editor = vim
 	pager = less -+XF -SQc
@@ -46,9 +46,9 @@
 [submodule]
 	fetchJobs = 0
 [credential "https://github.com"]
-	username = simnalamburt
+	username = hhosu107
 [credential "https://git.upnl.org"]
-	username = simnalamburt
+	username = hhosu107
 [alias]
 	# Complex and long git aliases.
 	# Check out https://github.com/simnalamburt/cgitc for short aliases!
@@ -102,3 +102,5 @@
 
 [include]
 	path = ~/.gitconfig.local
+[gpg]
+	program = gpg
