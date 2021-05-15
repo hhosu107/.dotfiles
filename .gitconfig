@@ -53,6 +53,11 @@
 	# Complex and long git aliases.
 	# Check out https://github.com/simnalamburt/cgitc for short aliases!
 
+	# git lg
+	#
+	# Print git log as a graph
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
 	# git pr [<remote>]
 	#
 	# Fetch pull requests from GitHub. Fetch "origin" if remote is not
