@@ -60,7 +60,9 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
   zinit cdreplay
 
   bindkey '^[[A' history-substring-search-up
+  bindkey '^[OA' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
+  bindkey '^[OB' history-substring-search-down
 else
   # Default terminal
   case "$TERM" in
