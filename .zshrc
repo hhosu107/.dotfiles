@@ -94,6 +94,7 @@ typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=2
 # zsh-sensible
 #
 if (( $+commands[lsd] )); then
+  alias ls='lsd'
   alias l='lsd -Al --date=relative --group-dirs=first --blocks=permission,user,size,date,name'
   alias ll='lsd -l --date=relative --group-dirs=first --blocks=permission,user,size,date,name'
   alias lt='lsd --tree --depth=2 --date=relative --group-dirs=first'
