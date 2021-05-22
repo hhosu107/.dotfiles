@@ -274,6 +274,9 @@ git -c "user.name=Your Name" -c "user.email=Your email" commit
 
 # Bundle all git repository as a single file
 git bundle create FILENAME --all
+
+# Install delta if missing
+[Link](https://github.com/dandavison/delta#installation)
 ```
 
 ### List all manually installed packages
