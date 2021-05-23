@@ -172,7 +172,13 @@ function! s:DragSelectMode()
 endfunction
 nnoremap <F9> :call <SID>DragSelectMode()<CR>
 
-
+"
+" Install vim-plug if not found
+"
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
 "
 " List of plugins
 "
