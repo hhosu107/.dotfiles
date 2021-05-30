@@ -146,6 +146,7 @@ $ tmux new                    | 세션 생성
 $ tmux ls                     | 세션 목록
 $ tmux attach [-t <이름>]     | 세션에 attatch
 $ tmux show-option -gv prefix | 현재 prefix를 보여줌
+^a I                          | TMUX option들을 설치
 ^a d                          | 세션에서 detach
 ^a $                          | 세션 이름변경
 ^a c                          | 윈도우 생성
