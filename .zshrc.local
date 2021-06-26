@@ -1,26 +1,26 @@
 ## PATH
-#export PATH="\
-#$HOME/.cargo/bin:\
-#$GOPATH/bin:\
-#$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:\
-#${PATH}"
+export PATH="\
+$HOME/.cargo/bin:\
+$GOPATH/bin:\
+$(ruby -r rubygems -e 'puts Gem.user_dir')/bin:\
+${PATH}"
 
 ## GNU Coreutils
 # alias ls='ls --color=tty'
 
 ## fzf (arch)
-#if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
-#  source /usr/share/fzf/key-bindings.zsh
-#fi
+if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
 
 ## neovim
-#alias vi=nvim
-#alias vim=nvim
+alias vi=nvim
+alias vim=nvim
 
 ## Fix home/end/delete
-#bindkey  "^[[H"   beginning-of-line
-#bindkey  "^[[F"   end-of-line
-#bindkey  "^[[3~"  delete-char
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char
 
 ## kubectl
 #if (( $+commands[kubectl] )); then
@@ -59,13 +59,13 @@
 #export _JAVA_AWT_WM_NONREPARENTING=1
 #
 ## wl-clipboard
-#alias pbcopy=wl-copy
-#alias pbpaste=wl-paste
+alias pbcopy=wl-copy
+alias pbpaste=wl-paste
 
 ## kime
-#export GTK_IM_MODULE='kime'
-#export QT_IM_MODULE='kime'
-#export XMODIFIERS='@im=kime'
+export GTK_IM_MODULE='kime'
+export QT_IM_MODULE='kime'
+export XMODIFIERS='@im=kime'
 
 ## sway
 #alias run-sway='systemd-cat -t sway sway'
@@ -76,3 +76,6 @@
 
 ## alacritty
 #alias ssh='TERM=xterm-256color ssh'
+
+## Python3 venv
+source ~/debpy/bin/activate
