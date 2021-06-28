@@ -79,3 +79,6 @@ export XMODIFIERS='@im=kime'
 
 ## Python3 venv
 source ~/debpy/bin/activate
+
+## Shorten path to Desktop
+export DESKTOP='/mnt/c/Users/hhosu/Desktop'

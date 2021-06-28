@@ -53,3 +53,6 @@ $RECYCLE.BIN/
 
 # yarn
 yarn-error.log
+
+# vscode
+.vscode
