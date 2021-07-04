@@ -188,6 +188,10 @@ if (( $+commands[go] )); then
   export PATH="$PATH:$GOPATH/bin"
 fi
 
+#
+# add custom binaries
+#
+export PATH="$PATH:~/bin"
 
 #
 # Load local configs
