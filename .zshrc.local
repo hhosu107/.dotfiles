@@ -82,3 +82,9 @@ source ~/debpy/bin/activate
 
 ## Shorten path to Desktop
 export DESKTOP='/mnt/c/Users/hhosu/Desktop'
+
+# Turn off all beeps
+# unsetopt BEEP
+
+# Turn off autocomplete beeps
+unsetopt LIST_BEEP

@@ -1,4 +1,9 @@
 {
   "git.addGBlameToVirtualText": true,
-  "rust-analyzer.updates.prompt": false
+  "rust-analyzer.updates.prompt": false,
+  "rust-analyzer.diagnostics.enable": true,
+  "rust-analyzer.inlayHints.chainingHints": true,
+  "rust-analyzer.inlayHints.typeHints": true,
+  "rust-analyzer.inlayHints.parameterHints": true,
+  "rust-analyzer.serverPath": "/home/charlese/.cargo/bin/rust-analyzer",
 }
