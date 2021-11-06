@@ -214,6 +214,9 @@ try
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-fugitive'
+  if has('nvim-0.6')
+    Plug 'github/copilot.vim'
+  endif
 
   " Visual
   Plug 'vim-airline/vim-airline'
