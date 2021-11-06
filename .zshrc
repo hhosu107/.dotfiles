@@ -50,7 +50,7 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
   # Others
   zinit light simnalamburt/cgitc
   zinit light simnalamburt/ctrlf
-  zinit light zdharma/fast-syntax-highlighting
+  zinit light zdharma-continuum/fast-syntax-highlighting
   zinit light zsh-users/zsh-history-substring-search
   zinit light simnalamburt/zsh-completions
 
