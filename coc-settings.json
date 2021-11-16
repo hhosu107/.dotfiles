@@ -6,4 +6,6 @@
   "rust-analyzer.inlayHints.typeHints": true,
   "rust-analyzer.inlayHints.parameterHints": true,
   "rust-analyzer.serverPath": "/home/charlese/.cargo/bin/rust-analyzer",
+  "coc.source.around.enable": false,
+  "coc.source.buffer.enable": false
 }
