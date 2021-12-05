@@ -59,8 +59,11 @@ bindkey  "^[[3~"  delete-char
 #export _JAVA_AWT_WM_NONREPARENTING=1
 #
 ## wl-clipboard
-alias pbcopy=wl-copy
-alias pbpaste=wl-paste
+# alias pbcopy=wl-copy
+# alias pbpaste=wl-paste
+
+# clip.exe
+alias pbcopy=clip.exe
 
 ## kime
 export GTK_IM_MODULE='kime'
