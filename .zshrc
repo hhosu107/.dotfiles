@@ -196,3 +196,6 @@ export PATH="$PATH:~/bin"
 if [[ -f ~/.zshrc.local ]]; then
   source ~/.zshrc.local
 fi
+
+# Created by `pipx` on 2021-12-30 13:31:04
+export PATH="$PATH:/home/charlese/.local/bin"
