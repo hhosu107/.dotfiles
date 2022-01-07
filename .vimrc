@@ -189,6 +189,7 @@ try
   " Configs
   Plug 'tpope/vim-sensible'
   Plug 'vim-utils/vim-interruptless'
+  echo s:use_coc
 
   " IDE
   if s:use_coc
@@ -208,6 +209,7 @@ try
     endif
     Plug 'pappasam/coc-jedi', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'fannheyward/coc-pyright', {'do': 'yarn install'}
     Plug 'ervandew/supertab'
     Plug 'junegunn/fzf'
   endif
@@ -417,6 +419,8 @@ highlight MatchParen cterm=NONE gui=NONE
 call s:bg('MatchParen', s:match_color)
 call s:bg('CocHighlightText', s:match_color)
 
+" scroll coc docs
+set mouse=a
 
 
 "

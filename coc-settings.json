@@ -1,5 +1,6 @@
 {
   "git.addGBlameToVirtualText": true,
+  "python.pythonPath": "/home/charlese/venv/latest/bin/python",
   "rust-analyzer.updates.prompt": false,
   "rust-analyzer.diagnostics.enable": true,
   "rust-analyzer.inlayHints.chainingHints": true,
