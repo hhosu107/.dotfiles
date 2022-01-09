@@ -82,8 +82,10 @@ ln -s ~/.dotfiles/kime.yml ~/.config/kime/config.yaml
 chsh -s /bin/zsh
 
 # Install below for using installed binaries
+neovim nodejs curl perl ruby lsd zinit nvm delta g++
 
-neovim nodejs curl perl ruby lsd zinit nvm delta g++ 
+# (WSL) Make share directory btwn WSL instances
+mkdir /mnt/wsl/share
 ```
 
 #### Check out my vim/zsh/tmux plugins
