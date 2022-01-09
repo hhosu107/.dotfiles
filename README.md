@@ -42,7 +42,7 @@ cp ~/.dotfiles/.gitconfig.local ~
 # gpg
 mkdir -p ~/.gnupg
 cp ~/.dotfiles/gpg-agent.conf ~/.gnupg
-# Trust my key
+# Trust my key (bring key or generate new one)
 gpg --edit-key 0F85F46EE242057F
 # gpg> uid 1
 # gpg> trust
@@ -77,6 +77,13 @@ ln -s ~/.dotfiles/gtk3.ini ~/.config/gtk-3.0/settings.ini
 # kime
 mkdir -p ~/.config/kime
 ln -s ~/.dotfiles/kime.yml ~/.config/kime/config.yaml
+
+# Change default shell to zsh
+chsh -s /bin/zsh
+
+# Install below for using installed binaries
+
+neovim nodejs curl perl ruby lsd zinit nvm delta g++ 
 ```
 
 #### Check out my vim/zsh/tmux plugins

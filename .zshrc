@@ -199,3 +199,7 @@ fi
 
 # Created by `pipx` on 2021-12-30 13:31:04
 export PATH="$PATH:/home/charlese/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
