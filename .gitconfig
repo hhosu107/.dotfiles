@@ -2,7 +2,7 @@
 [user]
 	name = Chansu Park
 	email = hhosu107@gmail.com
-	signingkey = 40BA1C90C70C5C39
+	signingkey = ~/.ssh/id_ed25519.pub
 [core]
 	editor = vim
 	pager = less -+XF -SQc
@@ -108,4 +108,4 @@
 [include]
 	path = ~/.gitconfig.local
 [gpg]
-	program = gpg
+	format = ssh
