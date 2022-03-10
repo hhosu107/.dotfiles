@@ -207,9 +207,8 @@ try
     if executable('clangd')
       Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
     endif
-    Plug 'pappasam/coc-jedi', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'fannheyward/coc-pyright', {'do': 'yarn install'}
     Plug 'ervandew/supertab'
     Plug 'junegunn/fzf'
   endif
@@ -218,6 +217,14 @@ try
   Plug 'tpope/vim-fugitive'
   if has('nvim-0.6')
     Plug 'github/copilot.vim'
+    let g:copilot_filetypes = {
+      \ '*': v:true,
+      \ 'python': v:false,
+      \ 'cplusplus': v:false,
+      \ 'c': v:false,
+      \ 'python3': v:false,
+    \ }
+
   endif
 
   " Visual
