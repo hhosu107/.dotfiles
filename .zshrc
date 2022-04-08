@@ -17,12 +17,31 @@ fi
 #
 # zinit
 #
+
+# zsh-history-substring-search
+function __zshrc_zsh_history_substring_search_bindkey {
+    # lazily config bindkey
+    # https://github.com/zsh-users/zsh-syntax-highlighting/issues/411#issuecomment-317077561
+    bindkey '^[[A' history-substring-search-up
+    bindkey '^[[B' history-substring-search-down
+    bindkey '^[OA' history-substring-search-up
+    bindkey '^[OB' history-substring-search-down
+    bindkey -M vicmd 'k' history-substring-search-up
+    bindkey -M vicmd 'j' history-substring-search-down
+}
+
 autoload -U is-at-least
 if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
   source ~/.zinit/bin/zinit.zsh
 
   zplugin ice depth=1
   zplugin light romkatv/powerlevel10k
+
+  function __zshrc_cgitc_patch {
+    sed 's/master/$(git_main_branch)/g' abbreviations > abbreviations.mod
+    sed 's/master/$(git_main_branch)/g' abbreviations.zsh > abbreviations.mod.zsh
+    sed 's/abbreviations/abbreviations.mod/' init.zsh > init.mod.zsh
+  }
 
   # Show autosuggestions
   ZSH_AUTOSUGGEST_USE_ASYNC=1
@@ -51,15 +70,17 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
   zinit light zsh-users/zsh-history-substring-search
   zinit light zsh-users/zsh-completions
 
+  # https://github.com/zdharma-continuum/zinit#calling-compinit-with-turbo-mode
+  # bindkey after loading plugins.
+  # Reference: https://github.com/ryul99/.dotfiles/blob/master/home/.zshrc
   autoload -Uz compinit bashcompinit
   compinit
   bashcompinit
   zinit cdreplay
+  zinit wait lucid for \
+      atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" zdharma-continuum/fast-syntax-highlighting \
+      atload"__zshrc_zsh_history_substring_search_bindkey" zsh-users/zsh-history-substring-search
 
-  bindkey '^[[A' history-substring-search-up
-  bindkey '^[OA' history-substring-search-up
-  bindkey '^[[B' history-substring-search-down
-  bindkey '^[OB' history-substring-search-down
 else
   # Default terminal
   case "$TERM" in
