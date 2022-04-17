@@ -1,6 +1,24 @@
 Cheatsheet
 ========
 
+First disable yarn from debian/ubuntu using 
+
+```bash
+$ sudo apt remove cmdtest
+$ sudo apt purge cmdtest
+```
+Then install [nvm](https://github.com/nvm-sh/nvm#manual-install) and
+```bash
+$ curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+$ nvm install node
+```
+From node version 14.x onwards, we have corepack command to enable yarn:
+```bash
+$ corepack enable
+$ corepack enable yarn
+```
+
+
 ssh                     | 설명
 ------------------------|-----
 `ssh-keygen -t ed25519` | 공개키/비공개키쌍 만들기

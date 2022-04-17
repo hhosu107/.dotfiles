@@ -429,6 +429,8 @@ call s:bg('CocHighlightText', s:match_color)
 " scroll coc docs
 set mouse=a
 
+" Python rootPatterns
+autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
 "
 " Define a 'vimrc' augroup
