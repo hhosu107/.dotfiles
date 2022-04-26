@@ -18,6 +18,9 @@ $ corepack enable
 $ corepack enable yarn
 ```
 
+tldr (cardo install tealdeer) |
+------------------------------|-----------------------
+`tldr <cmd>`                  | prints user manual for `<cmd>`
 
 ssh                     | 설명
 ------------------------|-----
