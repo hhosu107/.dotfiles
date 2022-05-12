@@ -233,9 +233,6 @@ try
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'ayu-theme/ayu-vim'
 
-  " Highlight
-  Plug 'jackguo380/vim-lsp-cxx-highlight'
-
   " Syntax
   let g:polyglot_disabled = ['v'] | Plug 'sheerun/vim-polyglot'
   Plug 'hashivim/vim-terraform'

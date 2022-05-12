@@ -220,7 +220,7 @@ if [[ -f ~/.zshrc.local ]]; then
 fi
 
 # Created by `pipx` on 2021-12-30 13:31:04
-export PATH="$PATH:/home/charlese/.local/bin"
+export PATH="$PATH:/home/$HOME/.local/bin"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

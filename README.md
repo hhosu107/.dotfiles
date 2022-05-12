@@ -86,6 +86,15 @@ neovim nodejs curl perl ruby lsd zinit nvm delta g++
 
 # (WSL) Make share directory btwn WSL instances
 mkdir /mnt/wsl/share
+
+# (yarn install)
+sudo apt remove cmdtest
+sudo apt remove yarn
+ 
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+yarn install
 ```
 
 #### Check out my vim/zsh/tmux plugins
