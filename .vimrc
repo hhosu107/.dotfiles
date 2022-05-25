@@ -207,6 +207,7 @@ try
     if executable('clangd')
       Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
     endif
+    Plug 'jackguo380/vim-lsp-cxx-highlight', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
     Plug 'ervandew/supertab'
