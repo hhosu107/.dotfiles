@@ -109,7 +109,11 @@ cp ~/dev/dotfiles/wsl2-bridge.ps1 ${windowsUserProfile}/wsl2-bridge.ps1
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 PowerShell -File $env:USERPROFILE\\wsl2-bridge.ps1
+
 ```
+#### Attach nvim setting to vscode[WSL]
+Install vscode-neovim in vscode; check useWSL option; assign neovim executable
+path and init.vim file.
 
 #### Check out my vim/zsh/tmux plugins
 - [simnalamburt/vim-mundo     ](https://github.com/simnalamburt/vim-mundo) - Vim undo tree visualizer
