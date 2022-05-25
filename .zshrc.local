@@ -104,7 +104,7 @@ alias activate_tf='source ~/venv/tf37/bin/activate'
 alias activate_torch='source ~/venv/torch38/bin/activate'
 
 ## Shorten path to Desktop
-export DESKTOP='/mnt/c/Users/hhosu/Desktop'
+export DESKTOP=${windowsUserProfile}/Desktop
 
 # Turn off all beeps
 # unsetopt BEEP
@@ -112,3 +112,9 @@ export DESKTOP='/mnt/c/Users/hhosu/Desktop'
 unsetopt HIST_BEEP
 # Turn off autocomplete beeps
 unsetopt LIST_BEEP
+
+# WSL specific settings (reference:
+# https://github.com/Alex-D/dotfiles/blob/main/.zliases.zsh)
+if grep --quiet microsoft /proc/version 2>/dev/null; then
+  alias wslb="PowerShell.exe 'Start-Process PowerShell -Verb RunAs \"PowerShell -File \$env:USERPROFILE\\wsl2-bridge.ps1\"'"
+fi

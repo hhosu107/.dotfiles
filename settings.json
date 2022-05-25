@@ -3,8 +3,8 @@
 //
 // This file resides at "%LocalAppData%\Microsoft\Windows Terminal". Sync with the
 // commands below:
-//     cp ~/.dotfiles/settings.json /mnt/c/Users/hhosu/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
-//     cp /mnt/c/Users/hhosu/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json ~/.dotfiles/settings.json
+//     cp ~/.dotfiles/settings.json ${windowsUserProfile}/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
+//     cp ${windowsUserProfile}/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json ~/.dotfiles/settings.json
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",

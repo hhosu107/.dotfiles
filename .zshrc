@@ -159,6 +159,9 @@ setopt always_to_end
 WORDCHARS=''
 zmodload -i zsh/complist
 
+# Find current user in Windows
+export WINDOWS_CURRENT_USER=$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
+export windowsUserProfile=/mnt/c/Users/${WINDOWS_CURRENT_USER}
 
 #
 # WSL support
@@ -168,7 +171,7 @@ if [[ -f /proc/sys/fs/binfmt_misc/WSLInterop ]]; then
   alias open=explorer.exe
   alias pbcopy=clip.exe
   alias pbpaste='powershell.exe Get-Clipboard | sed "s/\r$//" | head -c -1'
-  alias code='/mnt/c/Users/hhosu/AppData/Local/Programs/Microsoft\ VS\ Code/code.exe'
+  alias code='${windowsUserProfile}/AppData/Local/Programs/Microsoft\ VS\ Code/code.exe'
   alias wslexit='cmd.exe /c "wsl --shutdown"'
 fi
 

@@ -95,6 +95,20 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt-get update && sudo apt-get install yarn
 yarn install
+
+# (Open port of WSL; Reference:
+[here](https://github.com/Alex-D/dotfiles#wsl-bridge))
+
+## On WSL
+#!/bin/zsh
+windowsUserProfile=/mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')
+# Get the hacky network bridge script
+cp ~/dev/dotfiles/wsl2-bridge.ps1 ${windowsUserProfile}/wsl2-bridge.ps1
+
+## On PowerShell(Administrator)
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+PowerShell -File $env:USERPROFILE\\wsl2-bridge.ps1
 ```
 
 #### Check out my vim/zsh/tmux plugins
