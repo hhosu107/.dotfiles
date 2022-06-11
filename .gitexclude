@@ -56,3 +56,9 @@ yarn-error.log
 
 # vscode
 .vscode
+
+# TeX
+.aux
+.dvi
+.log
+.synctex.gz
