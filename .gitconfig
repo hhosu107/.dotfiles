@@ -109,3 +109,5 @@
 	path = ~/.gitconfig.local
 [gpg]
 	format = ssh
+[includeIf "gitdir:~/company_workspaces/**"]
+  path = ~/workspaces/.gitconfig
