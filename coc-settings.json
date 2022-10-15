@@ -5,7 +5,6 @@
   "rust-analyzer.inlayHints.chainingHints.enable": true,
   "rust-analyzer.inlayHints.typeHints.enable": true,
   "rust-analyzer.inlayHints.parameterHints.enable": true,
-  "rust-analyzer.server.path": "/home/charlese/.cargo/bin/rust-analyzer",
   "coc.source.around.enable": false,
   "coc.source.buffer.enable": false,
   "clangd.inlayHints.enable": true
