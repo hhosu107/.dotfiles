@@ -110,4 +110,4 @@
 [gpg]
 	format = ssh
 [includeIf "gitdir:~/company_workspaces/**"]
-  path = ~/workspaces/.gitconfig
+  path = ~/company_workspaces/.gitconfig
