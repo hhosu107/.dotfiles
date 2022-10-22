@@ -1,6 +1,14 @@
 Cheatsheet
 ========
 
+## General
+
+When we meet error when `sudo apt update` like this:
+`The repository '...' no longer has a Release file.`
+and we don't need that package,
+go to `/etc/apt/sources.list.d` and remove the corresponding list.
+
+
 ## WSL
 To enable `systemd`, insert this at `/etc/wsl.conf`:
 ```
