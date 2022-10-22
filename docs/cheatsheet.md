@@ -1,6 +1,20 @@
 Cheatsheet
 ========
 
+## WSL
+To enable `systemd`, insert this at `/etc/wsl.conf`:
+```
+[boot]
+systemd=true
+```
+
+To enable GUI apps, insert this at `${WINDOWS_HOME}/{user}/.wslconfig`:
+```
+[wsl2]
+guiApplications=true
+localhostForwarding=true
+```
+
 First disable yarn from debian/ubuntu using 
 
 ```bash
