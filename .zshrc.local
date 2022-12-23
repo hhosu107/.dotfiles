@@ -141,3 +141,10 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+# yt-dlp shotcut
+alias yt-down="yt-dlp --downloader ffmpeg --no-part"
+alias yt-down-live="yt-dlp --downloader ffmpeg --no-part --live-from-start"
+
+/home/charlese/.yarn/bin
+export PATH="/home/charlese/.yarn/bin:$PATH"
