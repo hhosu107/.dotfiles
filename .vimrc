@@ -255,7 +255,6 @@ try
 
   call plug#end()
 
-
   "
   " Configs for plugins
   "
@@ -271,6 +270,16 @@ try
         call CocActionAsync('doHover')
       endif
     endfunction
+
+    " hovering
+    if has('nvim-0.4.0') || has('patch-8.2.0750')
+      nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+      nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+      inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+      inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+      vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
+      vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
+    endif
 
     " coc-highlight
     augroup vimrc_highlight
@@ -425,7 +434,7 @@ call s:bg('MatchParen', s:match_color)
 call s:bg('CocHighlightText', s:match_color)
 
 " scroll coc docs
-set mouse=a
+" set mouse=a
 
 " Python rootPatterns
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']

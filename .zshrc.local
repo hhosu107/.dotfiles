@@ -148,9 +148,6 @@ fi
 alias yt-down="yt-dlp --downloader ffmpeg --no-part"
 alias yt-down-live="yt-dlp --downloader ffmpeg --no-part --live-from-start"
 
-/home/charlese/.yarn/bin
-export PATH="/home/charlese/.yarn/bin:$PATH"
-
 ## Renew let's encrypt cert
 export lets_encrypt_renew='sudo certbot certonly --manual -d charlese.dev -d "*.charlese.dev" --preferred-challenges dns'
 export watch_nslookup='watch nslookup -q=TXT _acme-challenge.charlese.dev'
