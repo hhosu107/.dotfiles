@@ -102,6 +102,7 @@ fi
 alias activate_latest='source ~/venv/latest/bin/activate'
 alias activate_tf='source ~/venv/tf37/bin/activate'
 alias activate_torch='source ~/venv/torch38/bin/activate'
+alias activate_py38='source ~/ubuntu-py/bin/activate'
 
 ## Shorten path to Desktop
 export DESKTOP=${windowsUserProfile}/Desktop
@@ -121,6 +122,7 @@ fi
 
 SSH_ENV="$HOME/.ssh/agent-environment"
 
+# https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login
 function start_agent {
     echo "Initialising new SSH agent..."
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
