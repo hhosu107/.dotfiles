@@ -39,6 +39,8 @@ set autoindent
 set smartindent
 
 " Tab
+" Exclude makefile
+autocmd FileType make setlocal noexpandtab
 set softtabstop=2
 set shiftwidth=2
 set expandtab
