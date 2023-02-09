@@ -206,6 +206,7 @@ try
     Plug 'neoclide/coc-stylelint', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc-sources', {'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/emoji'}
+    Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
     if executable('clangd')
       Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
     endif

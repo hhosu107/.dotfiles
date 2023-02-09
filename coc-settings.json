@@ -15,5 +15,6 @@
   "rust-analyzer.inlayHints.parameterHints.enable": true,
   "coc.source.around.enable": false,
   "coc.source.buffer.enable": false,
-  "clangd.inlayHints.enable": true
+  "clangd.inlayHints.enable": true,
+  "coc.preferences.extensionUpdateCheck": "daily"
 }
