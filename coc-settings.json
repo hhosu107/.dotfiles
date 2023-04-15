@@ -9,6 +9,7 @@
   },
   "git.addGBlameToVirtualText": true,
   "rust-analyzer.updates.prompt": false,
+  "rust-analyzer.checkOnSave.command": "clippy",
   "rust-analyzer.diagnostics.enable": true,
   "rust-analyzer.inlayHints.chainingHints.enable": true,
   "rust-analyzer.inlayHints.typeHints.enable": true,

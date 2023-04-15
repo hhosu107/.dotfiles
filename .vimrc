@@ -215,6 +215,7 @@ try
     Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
     Plug 'ervandew/supertab'
     Plug 'junegunn/fzf'
+    Plug 'junegunn/fzf.vim'
   endif
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdtree'
@@ -228,11 +229,19 @@ try
       \ 'c': v:false,
       \ 'python3': v:false,
     \ }
+    let g:copilot_no_tab_map = v:true
+    inoremap <silent><expr><tab>
+      \ coc#pum#visible() && coc#pum#info()['inserted'] ? coc#pum#confirm() :
+      \ coc#pum#visible() && copilot#GetDisplayedSuggestion()['text'] ==# '' ? coc#pum#confirm() :
+      \ copilot#Accept("\<Tab>")
+    inoremap <silent><expr><Esc>
+      \ coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#cancel() : "\<Esc>"
 
   endif
 
   " Visual
   Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'ayu-theme/ayu-vim'
