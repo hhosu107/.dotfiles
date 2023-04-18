@@ -229,13 +229,24 @@ try
       \ 'c': v:false,
       \ 'python3': v:false,
     \ }
-    let g:copilot_no_tab_map = v:true
-    inoremap <silent><expr><tab>
-      \ coc#pum#visible() && coc#pum#info()['inserted'] ? coc#pum#confirm() :
-      \ coc#pum#visible() && copilot#GetDisplayedSuggestion()['text'] ==# '' ? coc#pum#confirm() :
-      \ copilot#Accept("\<Tab>")
-    inoremap <silent><expr><Esc>
-      \ coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#cancel() : "\<Esc>"
+    " <C-j/k>: to navigate completion menu.
+    " <C-j> also opens completion menu.
+    inoremap <silent><expr><C-j>
+      \ coc#pum#visible() ? coc#pum#next(1) : coc#refresh()
+    inoremap <silent><expr><C-k>
+      \ coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
+    inoremap <silent><expr><C-l>
+      \ coc#pum#visible() ? coc#pum#scroll(1) : "\<C-l>"
+    inoremap <silent><expr><C-h>
+      \ coc#pum#visible() ? coc#pum#scroll(0) : "\<C-h>"
+
+    "let g:copilot_no_tab_map = v:true
+    "inoremap <silent><expr><tab>
+    "  \ coc#pum#visible() && coc#pum#info()['inserted'] ? coc#pum#confirm() :
+    "  \ coc#pum#visible() && copilot#GetDisplayedSuggestion()['text'] ==# '' ? coc#pum#confirm() :
+    "  \ copilot#Accept("\<Tab>")
+    "inoremap <silent><expr><Esc>
+    "  \ coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#cancel() : "\<Esc>"
 
   endif
 
