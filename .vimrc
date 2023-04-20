@@ -264,6 +264,9 @@ try
   " Format
   Plug 'sgur/vim-editorconfig'
 
+  " Black (Python formatter)
+  Plug 'psf/black', { 'branch': 'stable', 'do': 'yarn install --frozen-lockfile'}
+
   " Blink
   Plug 'farmergreg/vim-lastplace'
   Plug 'rhysd/clever-f.vim'
@@ -279,6 +282,18 @@ try
   " Translate
   Plug 'uga-rosa/translate.nvim'
   call plug#end()
+
+  "
+  " Python black config
+  "
+  let g:black_linelength = 120
+
+  " Apply black on save
+  augroup black_on_save
+    autocmd!
+    autocmd BufWritePre *.py Black
+  augroup end
+
 
   "
   " Configs for plugins
