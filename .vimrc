@@ -260,6 +260,7 @@ try
   " Syntax
   let g:polyglot_disabled = ['v'] | Plug 'sheerun/vim-polyglot'
   Plug 'hashivim/vim-terraform'
+  Plug 'wfxr/protobuf.vim'
 
   " Format
   Plug 'sgur/vim-editorconfig'
