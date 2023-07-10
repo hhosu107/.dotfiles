@@ -56,7 +56,7 @@ set nowrapscan
 set number
 set cursorline
 " 80th column color
-set textwidth=80
+set textwidth=100
 set formatoptions-=t
 set colorcolumn=+1,+2,+3
 " Listchars
@@ -216,6 +216,8 @@ try
     Plug 'ervandew/supertab'
     Plug 'junegunn/fzf'
     Plug 'junegunn/fzf.vim'
+    Plug 'cespare/vim-toml'
+    Plug 'rust-lang/rust.vim'
   endif
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdtree'
@@ -228,6 +230,7 @@ try
       \ 'cplusplus': v:false,
       \ 'c': v:false,
       \ 'python3': v:false,
+      \ 'rust': v:false,
     \ }
     " <C-j/k>: to navigate completion menu.
     " <C-j> also opens completion menu.

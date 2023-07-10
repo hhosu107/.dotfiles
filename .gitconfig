@@ -27,6 +27,7 @@
 	ui = auto
 [diff]
 	renames = copies
+	tool = nvimdiff
 [fetch]
 	prune = yes
 [push]

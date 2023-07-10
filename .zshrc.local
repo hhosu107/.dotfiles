@@ -102,6 +102,7 @@ fi
 alias activate_latest='source ~/venv/latest/bin/activate'
 alias activate_tf='source ~/venv/tf37/bin/activate'
 alias activate_torch='source ~/venv/torch38/bin/activate'
+alias activate_py311='source ~/venv/py311/bin/activate'
 alias activate_py38='source ~/ubuntu-py/bin/activate'
 
 ## Shorten path to Desktop
