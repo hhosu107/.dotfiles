@@ -145,6 +145,9 @@ else
     start_agent;
 fi
 
+# Alias ssh to ssh -A so that connection to the remote server allows ssh-agent forwarding
+alias ssh='ssh -A'
+
 # yt-dlp shotcut
 alias yt-down="yt-dlp --downloader ffmpeg --no-part"
 alias yt-down-live="yt-dlp --downloader ffmpeg --no-part --live-from-start"
