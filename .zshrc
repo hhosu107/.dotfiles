@@ -74,6 +74,10 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
     from'gh-r' sbin'fzf' junegunn/fzf \
     https://github.com/junegunn/fzf/raw/master/shell/{'completion','key-bindings'}.zsh
 
+  # kubectx, kubens
+  zinit for \
+    sbin'kubectx;kubens' light-mode ahmetb/kubectx
+
   zinit load tirr-c/zsh-env-setup
 
   # https://github.com/zdharma-continuum/zinit#calling-compinit-with-turbo-mode

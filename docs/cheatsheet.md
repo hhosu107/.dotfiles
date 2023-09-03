@@ -65,7 +65,7 @@ Shell | 설명
 
 [fzf][]      | 설명
 -------------|--------
-`Ctrl` + `r` | 자기가 쳤던 커맨드 fuzzy 탐색
+`Ctrl` + `r` | 자기가 쳤던 커맨드 fuzzy 탐색 (with history line number; by fzf/key-bindings.zsh,completion.zsh)
 `Ctrl` + `t` | 디렉토리 fuzzy 탐색
 
 [fzf]: https://github.com/junegunn/fzf
