@@ -67,8 +67,14 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
   zinit light simnalamburt/cgitc
   zinit light simnalamburt/ctrlf
   zinit light zdharma-continuum/fast-syntax-highlighting
-  zinit light zsh-users/zsh-history-substring-search
-  zinit light zsh-users/zsh-completions
+#   zinit light zsh-users/zsh-history-substring-search
+
+  # fzf
+  zinit for \
+    from'gh-r' sbin'fzf' junegunn/fzf \
+    https://github.com/junegunn/fzf/raw/master/shell/{'completion','key-bindings'}.zsh
+
+  zinit load tirr-c/zsh-env-setup
 
   # https://github.com/zdharma-continuum/zinit#calling-compinit-with-turbo-mode
   # bindkey after loading plugins.
@@ -78,8 +84,11 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
   bashcompinit
   zinit cdreplay
   zinit wait lucid for \
-      atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" zdharma-continuum/fast-syntax-highlighting \
-      atload"__zshrc_zsh_history_substring_search_bindkey" zsh-users/zsh-history-substring-search
+      as'program' pick'git-select-branch' autoload'git-select-branch' \
+        tirr-c/git-select-branch \
+      light-mode blockf zsh-users/zsh-completions \
+      atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" zdharma-continuum/fast-syntax-highlighting
+#       atload"__zshrc_zsh_history_substring_search_bindkey" zsh-users/zsh-history-substring-search
 
 else
   # Default terminal
