@@ -5,12 +5,6 @@
 stty stop undef
 export GPG_TTY=$(tty)
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 
 
@@ -69,6 +63,10 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
   zinit light zdharma-continuum/fast-syntax-highlighting
 #   zinit light zsh-users/zsh-history-substring-search
 
+  # sbin ice from git
+  zinit for \
+   light-mode zdharma-continuum/zinit-annex-bin-gem-node
+
   # fzf
   zinit for \
     from'gh-r' sbin'fzf' junegunn/fzf \
@@ -93,6 +91,12 @@ if is-at-least 5.1 && [[ -d ~/.zinit ]]; then
       light-mode blockf zsh-users/zsh-completions \
       atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" zdharma-continuum/fast-syntax-highlighting
 #       atload"__zshrc_zsh_history_substring_search_bindkey" zsh-users/zsh-history-substring-search
+  # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+  # Initialization code that may require console input (password prompts, [y/n]
+  # confirmations, etc.) must go above this block; everything else may go below.
+  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+  fi
 
 else
   # Default terminal

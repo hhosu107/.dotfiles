@@ -111,4 +111,8 @@
 [gpg]
 	format = ssh
 [includeIf "gitdir:~/company_workspaces/"]
-  path = ~/company_workspaces/.gitconfig
+	path = ~/company_workspaces/.gitconfig
+# .gitconfig.local
+# [url "git@github.com:"]
+#   insteadOf = https://github.com/
+
