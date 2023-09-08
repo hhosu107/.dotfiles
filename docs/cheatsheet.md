@@ -40,6 +40,10 @@ $ corepack enable
 $ corepack enable yarn
 ```
 
+### [usbipd-win](github.com/dorssel/usbipd-win/releases)
+This one makes WSL to be able to use USB devices.
+
+
 tldr (cardo install tealdeer) |
 ------------------------------|-----------------------
 `tldr <cmd>`                  | prints user manual for `<cmd>`
