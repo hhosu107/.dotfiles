@@ -39,11 +39,12 @@ set autoindent
 set smartindent
 
 " Tab
-" Exclude makefile
-autocmd FileType make setlocal noexpandtab
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+" Exclude makefile
+autocmd BufEnter * if &filetype == "make" | setlocal noexpandtab | endif
+autocmd BufEnter * if &filetype == "textproto" | setlocal noexpandtab | endif
 
 " Searching
 set incsearch
