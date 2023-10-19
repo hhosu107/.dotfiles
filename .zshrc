@@ -232,6 +232,9 @@ fi
 #
 export PATH="$PATH:~/bin"
 
+# Set internal field separator to newline
+IFS=$'\n'
+
 #
 # Load local configs
 #
