@@ -87,6 +87,8 @@ chsh -s /bin/zsh
 nodejs curl perl ruby zinit delta g++
 
 neovim via appimage (or use binary for aarch64)
+Or via [snap](https://snapcraft.io/install/nvim/debian) and symlink via `sudo ln -s =/usr/bin/snap
+/usr/bin/nvim`
 
 [Rust](https://doc.rust-lang.org/book/ch01-01-installation.html)
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
