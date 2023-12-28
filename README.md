@@ -84,7 +84,24 @@ ln -s ~/.dotfiles/kime.yml ~/.config/kime/config.yaml
 chsh -s /bin/zsh
 
 # Install below for using installed binaries
-neovim nodejs curl perl ruby lsd zinit nvm delta g++
+nodejs curl perl ruby zinit delta g++
+
+neovim via appimage (or use binary for aarch64)
+
+[Rust](https://doc.rust-lang.org/book/ch01-01-installation.html)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+lsd
+cargo install lsd
+
+erdtree
+cargo install exa
+
+ripgrep
+cargo install ripgrep
+
+[nvm](https://github.com/nvm-sh/nvm)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 # (WSL) Make share directory btwn WSL instances
 mkdir /mnt/wsl/share

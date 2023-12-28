@@ -231,7 +231,7 @@ try
       \ 'cplusplus': v:false,
       \ 'c': v:false,
       \ 'python3': v:false,
-      \ 'rust': v:false,
+      \ 'rust': v:true,
     \ }
     " <C-j/k>: to navigate completion menu.
     " <C-j> also opens completion menu.
