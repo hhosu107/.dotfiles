@@ -153,6 +153,10 @@ alias yt-down="yt-dlp --downloader ffmpeg --no-part"
 alias yt-down-live="yt-dlp --downloader ffmpeg --no-part --live-from-start"
 
 ## Renew let's encrypt cert
-alias lets_encrypt_renew='sudo certbot certonly --manual -d charlese.dev -d "*.charlese.dev" --preferred-challenges dns'
-alias certbot_renew='sudo certbot renew'
-alias watch_nslookup='watch nslookup -q=TXT _acme-challenge.charlese.dev'
+export lets_encrypt_renew='sudo certbot certonly --manual -d charlese.dev -d "*.charlese.dev" --preferred-challenges dns'
+export certbot_renew='sudo certbot renew'
+export watch_nslookup='watch nslookup -q=TXT _acme-challenge.charlese.dev'
+
+if [[ -f ~/.zshrc.local.local ]]; then
+  source ~/.zshrc.local.local
+fi

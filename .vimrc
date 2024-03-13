@@ -39,10 +39,10 @@ set autoindent
 set smartindent
 
 " Tab
+autocmd FileType make setlocal noexpandtab
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-" Exclude makefile
 autocmd BufEnter * if &filetype == "make" | setlocal noexpandtab | endif
 autocmd BufEnter * if &filetype == "textproto" | setlocal noexpandtab | endif
 
@@ -227,11 +227,10 @@ try
     Plug 'github/copilot.vim'
     let g:copilot_filetypes = {
       \ '*': v:true,
-      \ 'python': v:false,
       \ 'cplusplus': v:false,
       \ 'c': v:false,
       \ 'python3': v:false,
-      \ 'rust': v:true,
+      \ 'rust': v:false,
     \ }
     " <C-j/k>: to navigate completion menu.
     " <C-j> also opens completion menu.
@@ -486,6 +485,8 @@ call s:bg('CocHighlightText', s:match_color)
 
 " Python rootPatterns
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
+
+
 
 "
 " Define a 'vimrc' augroup
