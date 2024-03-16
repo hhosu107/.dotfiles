@@ -192,7 +192,49 @@ try
   " Configs
   Plug 'tpope/vim-sensible'
   Plug 'vim-utils/vim-interruptless'
+  Plug 'junegunn/fzf'
+  Plug 'junegunn/fzf.vim'
   echo s:use_coc
+
+
+  " Visual
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'ntpeters/vim-better-whitespace'
+  Plug 'ayu-theme/ayu-vim'
+  Plug 'junegunn/seoul256.vim'
+
+  " Syntax
+  let g:polyglot_disabled = ['v'] | Plug 'sheerun/vim-polyglot'
+  Plug 'hashivim/vim-terraform'
+  Plug 'wfxr/protobuf.vim'
+
+  " Format
+  Plug 'editorconfig/editorconfig-vim'
+
+  " Black (Python formatter)
+  Plug 'psf/black', { 'branch': 'stable', 'do': 'yarn install --frozen-lockfile'}
+
+  " Blink
+  Plug 'farmergreg/vim-lastplace'
+  Plug 'rhysd/clever-f.vim'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'haya14busa/incsearch.vim'
+  Plug 'haya14busa/incsearch-easymotion.vim'
+
+  " Util
+  Plug 'simnalamburt/vim-mundo'
+  Plug 'godlygeek/tabular'
+  Plug 'justinmk/vim-dirvish'
+
+  " Translate
+  Plug 'uga-rosa/translate.nvim'
+
+  " Git
+  Plug 'ryanoasis/vim-devicons'
+  Plug 'preservim/nerdtree'
+  Plug 'tpope/vim-fugitive'
 
   " IDE
   if s:use_coc
@@ -214,15 +256,10 @@ try
     Plug 'jackguo380/vim-lsp-cxx-highlight', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'ervandew/supertab'
-    Plug 'junegunn/fzf'
-    Plug 'junegunn/fzf.vim'
+    " Plug 'ervandew/supertab'
     Plug 'cespare/vim-toml'
     Plug 'rust-lang/rust.vim'
   endif
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'preservim/nerdtree'
-  Plug 'tpope/vim-fugitive'
   if has('nvim-0.6')
     Plug 'github/copilot.vim'
     let g:copilot_filetypes = {
@@ -243,48 +280,15 @@ try
     inoremap <silent><expr><C-h>
       \ coc#pum#visible() ? coc#pum#scroll(0) : "\<C-h>"
 
-    "let g:copilot_no_tab_map = v:true
-    "inoremap <silent><expr><tab>
-    "  \ coc#pum#visible() && coc#pum#info()['inserted'] ? coc#pum#confirm() :
-    "  \ coc#pum#visible() && copilot#GetDisplayedSuggestion()['text'] ==# '' ? coc#pum#confirm() :
-    "  \ copilot#Accept("\<Tab>")
-    "inoremap <silent><expr><Esc>
-    "  \ coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#cancel() : "\<Esc>"
+    let g:copilot_no_tab_map = v:true
+    inoremap <silent><expr><tab>
+      \ coc#pum#visible() && coc#pum#info()['inserted'] ? coc#pum#confirm() :
+      \ coc#pum#visible() && copilot#GetDisplayedSuggestion()['text'] ==# '' ? coc#pum#confirm() :
+      \ copilot#Accept("\<Tab>")
+    inoremap <silent><expr><Esc>
+      \ coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#cancel() : "\<Esc>"
 
   endif
-
-  " Visual
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'ntpeters/vim-better-whitespace'
-  Plug 'ayu-theme/ayu-vim'
-
-  " Syntax
-  let g:polyglot_disabled = ['v'] | Plug 'sheerun/vim-polyglot'
-  Plug 'hashivim/vim-terraform'
-  Plug 'wfxr/protobuf.vim'
-
-  " Format
-  Plug 'sgur/vim-editorconfig'
-
-  " Black (Python formatter)
-  Plug 'psf/black', { 'branch': 'stable', 'do': 'yarn install --frozen-lockfile'}
-
-  " Blink
-  Plug 'farmergreg/vim-lastplace'
-  Plug 'rhysd/clever-f.vim'
-  Plug 'easymotion/vim-easymotion'
-  Plug 'haya14busa/incsearch.vim'
-  Plug 'haya14busa/incsearch-easymotion.vim'
-
-  " Util
-  Plug 'simnalamburt/vim-mundo'
-  Plug 'godlygeek/tabular'
-  Plug 'justinmk/vim-dirvish'
-
-  " Translate
-  Plug 'uga-rosa/translate.nvim'
   call plug#end()
 
   "
@@ -343,7 +347,7 @@ try
     command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
     " supertab
-    let g:SuperTabDefaultCompletionType = "<c-n>"
+    " let g:SuperTabDefaultCompletionType = "<c-n>"
 
     " fzf
     nnoremap <F5> :call <SID>lsp_menu()<CR>
