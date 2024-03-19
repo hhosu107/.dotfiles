@@ -83,6 +83,8 @@ ln -s ~/.dotfiles/kime.yml ~/.config/kime/config.yaml
 # Change default shell to zsh
 chsh -s /bin/zsh
 
+# Copy systemd/ssh-agent.service to ~/.config/systemd/user/ssh-agent.service
+
 # Install below for using installed binaries
 nodejs curl perl ruby zinit delta g++
 
