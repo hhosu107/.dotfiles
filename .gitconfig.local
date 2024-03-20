@@ -1,5 +1,6 @@
 # vim: ft=gitconfig noexpandtab sw=8
-
+[user]
+signingkey = REDACTED # paste your ssh public key here
 # neovim
 [core]
 	editor = nvim
