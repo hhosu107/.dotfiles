@@ -123,36 +123,36 @@ fi
 
 
 # ssh-agent as user-level systemd service, also enable ssh-agent forwarding on tmux
-# if test -e "$(readlink -f $HOME/.ssh/ssh_auth_sock)" ; then
-#     export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
-# elif ! test "$SSH_AUTH_SOCK" ; then
-#     export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
-# fi
+if test -e "$(readlink -f $HOME/.ssh/ssh_auth_sock)" ; then
+    export SSH_AUTH_SOCK="$HOME/.ssh/ssh_auth_sock"
+elif ! test "$SSH_AUTH_SOCK" ; then
+    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/ssh-agent.socket"
+fi
 
 
-SSH_ENV="$HOME/.ssh/agent-environment"
+# SSH_ENV="$HOME/.ssh/agent-environment"
 
 # https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login
-function start_agent {
-    echo "Initialising new SSH agent..."
-    /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-    echo succeeded
-    chmod 600 "${SSH_ENV}"
-    . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add;
-}
-
-# Source SSH settings, if applicable
-
-if [ -f "${SSH_ENV}" ]; then
-   . "${SSH_ENV}" > /dev/null
-   #ps ${SSH_AGENT_PID} doesn't work under cywgin
-   ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-       start_agent;
-    }
-else
-   start_agent;
-fi
+# function start_agent {
+#     echo "Initialising new SSH agent..."
+#     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+#     echo succeeded
+#     chmod 600 "${SSH_ENV}"
+#     . "${SSH_ENV}" > /dev/null
+#     /usr/bin/ssh-add;
+# }
+# 
+# # Source SSH settings, if applicable
+# 
+# if [ -f "${SSH_ENV}" ]; then
+#    . "${SSH_ENV}" > /dev/null
+#    #ps ${SSH_AGENT_PID} doesn't work under cywgin
+#    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+#        start_agent;
+#     }
+# else
+#    start_agent;
+# fi
 
 # Alias ssh to ssh -A so that connection to the remote server allows ssh-agent forwarding
 alias ssh='ssh -A'
