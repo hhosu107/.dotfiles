@@ -88,6 +88,12 @@ chsh -s /bin/zsh
 # Install below for using installed binaries
 nodejs curl perl ruby zinit delta g++
 
+# Install git-delta via cargo
+cargo install git-delta
+
+# Install pynvim (for numirias/semshi)
+pip install pynvim --upgrade
+
 neovim via appimage (or use binary for aarch64)
 Or via [snap](https://snapcraft.io/install/nvim/debian) and symlink via `sudo ln -s =/usr/bin/snap
 /usr/bin/nvim`
