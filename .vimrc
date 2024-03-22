@@ -236,6 +236,9 @@ try
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-fugitive'
 
+  " Python semantic ide
+  Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+
   " IDE
   if s:use_coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
