@@ -214,7 +214,7 @@ try
   Plug 'editorconfig/editorconfig-vim'
 
   " Black (Python formatter)
-  Plug 'psf/black', { 'branch': 'stable', 'do': 'yarn install --frozen-lockfile'}
+  " Plug 'psf/black', { 'branch': 'stable', 'do': 'yarn install --frozen-lockfile'}
 
   " Blink
   Plug 'farmergreg/vim-lastplace'
@@ -257,6 +257,7 @@ try
       Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
     endif
     Plug 'jackguo380/vim-lsp-cxx-highlight', {'do': 'yarn install --frozen-lockfile'}
+    Plug 'neovim/nvim-lspconfig', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
     Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
     " Plug 'ervandew/supertab'
@@ -297,13 +298,13 @@ try
   "
   " Python black config
   "
-  let g:black_linelength = 120
+  "let g:black_linelength = 120
 
   " Apply black on save
-  augroup black_on_save
-    autocmd!
-    autocmd BufWritePre *.py Black
-  augroup end
+  " augroup black_on_save
+  "   autocmd!
+  "   autocmd BufWritePre *.py Black
+  " augroup end
 
 
   "
