@@ -83,7 +83,11 @@ ln -s ~/.dotfiles/kime.yml ~/.config/kime/config.yaml
 # Change default shell to zsh
 chsh -s /bin/zsh
 
-# Copy systemd/ssh-agent.service to ~/.config/systemd/user/ssh-agent.service (failed?)
+# Copy systemd/ssh-agent.service to ~/.config/systemd/user/ssh-agent.service
+
+# Install python-is-python3
+
+sudo apt install 
 
 # Install below for using installed binaries
 nodejs curl perl ruby zinit delta g++
