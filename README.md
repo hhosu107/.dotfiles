@@ -90,7 +90,7 @@ chsh -s /bin/zsh
 sudo apt install 
 
 # Install below for using installed binaries
-nodejs curl perl ruby zinit delta g++
+nodejs curl perl ruby zinit delta g++ iperf
 
 # Install git-delta via cargo
 cargo install git-delta
