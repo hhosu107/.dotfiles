@@ -9,13 +9,17 @@
   },
   "git.addGBlameToVirtualText": true,
   "rust-analyzer.updates.prompt": true,
-  "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.checkOnSave": true,
   "rust-analyzer.diagnostics.enable": true,
   "rust-analyzer.inlayHints.chainingHints.enable": true,
   "rust-analyzer.inlayHints.typeHints.enable": true,
   "rust-analyzer.inlayHints.parameterHints.enable": true,
   "coc.source.around.enable": false,
   "coc.source.buffer.enable": false,
-  "clangd.inlayHints.enable": true,
-  "coc.preferences.extensionUpdateCheck": "daily"
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "workspace.ignoredFolders": [
+    "$HOME",
+    "$HOME/.cargo/**",
+    "$HOME/.rustup/**"
+  ],
 }

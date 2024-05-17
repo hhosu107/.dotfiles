@@ -239,31 +239,42 @@ try
   " Python semantic ide
   Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 
+  " marp-vim
+  Plug 'dhruvasagar/vim-marp'
+
+  " treesitter.vim
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
+  " telescope.vim
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+  Plug 'BurntSushi/ripgrep'
+
   " IDE
-  if s:use_coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'neoclide/coc-git', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-stylelint', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neoclide/coc-sources', {'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/emoji'}
-    Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
-    if executable('clangd')
-      Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
-    endif
-    Plug 'jackguo380/vim-lsp-cxx-highlight', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'neovim/nvim-lspconfig', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
-    Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
-    " Plug 'ervandew/supertab'
-    Plug 'cespare/vim-toml'
-    Plug 'rust-lang/rust.vim'
+  "if s:use_coc
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'neoclide/coc-git', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-json', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-yaml', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-stylelint', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc-sources', {'do': 'yarn install --frozen-lockfile', 'rtp': 'packages/emoji'}
+  Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
+  if executable('clangd')
+    Plug 'clangd/coc-clangd', {'do': 'yarn install --frozen-lockfile'}
   endif
+  Plug 'jackguo380/vim-lsp-cxx-highlight', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neovim/nvim-lspconfig', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'fannheyward/coc-pyright', {'do': 'yarn install --frozen-lockfile'}
+  " Plug 'fannheyward/coc-rust-analyzer', {'do': 'yarn install --frozen-lockfile'}
+  " Plug 'ervandew/supertab'
+  Plug 'cespare/vim-toml'
+  Plug 'rust-lang/rust.vim'
+  "endif
   if has('nvim-0.6')
     Plug 'github/copilot.vim'
     let g:copilot_filetypes = {
