@@ -526,3 +526,7 @@ augroup END
 if filereadable($HOME . '/.vimrc.local')
   source $HOME/.vimrc.local
 endif
+
+if filereadable($HOME . '/.config/nvim/lua/init.lua')
+  lua require('init')
+endif
