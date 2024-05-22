@@ -394,7 +394,7 @@ try
     endfunction
   endif
 
-  " nerdtree
+  " nerdtree, tagbar: ctrl-n
   noremap <silent> <C-n> :NERDTreeToggle<CR>
   function! s:nerdtree_startup()
     if exists('s:std_in') || argc() != 1 || !isdirectory(argv()[0])
