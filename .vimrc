@@ -246,8 +246,8 @@ try
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
   " tagbar
-  Plug 'preservim/tagbar', {'do': 'yarn install --frozen-lockfile'}
-  let g:tagbar_position = 'rightbottom'
+  " Plug 'preservim/tagbar', {'do': 'yarn install --frozen-lockfile'}
+  " let g:tagbar_position = 'rightbottom'
 
   " telescope.vim
   Plug 'nvim-lua/plenary.nvim'
