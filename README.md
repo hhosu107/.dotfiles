@@ -42,6 +42,10 @@ ln -sf ~/.dotfiles/.gitconfig ~
 ln -sf ~/.dotfiles/.gitexclude ~
 cp ~/.dotfiles/.gitconfig.local ~
 
+# (Linux) keychain
+sudo apt install keychain
+ln -sf ~/.dotfiles/.ssh/add_keys.sh ~/.ssh/add_keys.sh
+
 # gpg
 mkdir -p ~/.gnupg
 cp ~/.dotfiles/gpg-agent.conf ~/.gnupg
