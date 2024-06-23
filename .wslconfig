@@ -1,4 +1,3 @@
 [wsl2]
 guiApplications=true
 localhostForwarding=true
-networkingMode=mirrored
