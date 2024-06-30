@@ -151,6 +151,10 @@ cp ~/dev/dotfiles/wsl2-bridge.ps1 ${windowsUserProfile}/wsl2-bridge.ps1
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 PowerShell -File $env:USERPROFILE\\wsl2-bridge.ps1
 
+### configure wslconfig and /etc/wsl.conf
+ln -sf ~/.dotfiles/wslconfigs/.wslconfig /mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')/.wslconfig
+sudo cp ~/.dotfiles/wslconfigs/wsl.conf /etc/wsl.conf
+
 ```
 #### Attach nvim setting to vscode[WSL]
 Install vscode-neovim in vscode; check useWSL option; assign neovim executable
