@@ -155,6 +155,21 @@ PowerShell -File $env:USERPROFILE\\wsl2-bridge.ps1
 ln -sf ~/.dotfiles/wslconfigs/.wslconfig /mnt/c/Users/$(cmd.exe /c "echo %USERNAME%" 2>/dev/null | tr -d '\r')/.wslconfig
 sudo cp ~/.dotfiles/wslconfigs/wsl.conf /etc/wsl.conf
 
+### Alternative (if Alex-D's one doesn't work)
+
+- `PowerShell) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All` (skip if already enabled)
+- `PowerShell) New-VMSwitch -Name "WSL" -NetAdapterName "<Your Network Adapter Name>"
+    -AllowManagementOS $true`
+  - `Get-NetAdapter` to get `<Your Network Adapter Name>`
+- Add below to .wslconfig
+
+    [wsl2]
+    networkingMode = bridged
+    vmSwitch = WSL
+
+- `wsl --shutdown` and restart WSL
+
+
 ```
 #### Attach nvim setting to vscode[WSL]
 Install vscode-neovim in vscode; check useWSL option; assign neovim executable
