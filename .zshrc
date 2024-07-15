@@ -280,3 +280,7 @@ export PATH="$PATH:/home/$HOME/.local/bin"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# github cli shortcuts
+# gh copilot suggest => ghcs, gh copilot explain => ghce
+eval "$(gh copilot alias -- zsh)"

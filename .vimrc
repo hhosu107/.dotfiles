@@ -308,6 +308,12 @@ try
       \ coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#cancel() : "\<Esc>"
 
   endif
+
+  " Copilot Chat
+  Plug 'zbirenbaum/copilot.lua'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'CopilotC-Nvim/CopilotChat.nvim', { 'branch': 'canary' }
+
   call plug#end()
 
   "
@@ -534,3 +540,11 @@ endif
 if filereadable($HOME . '/.config/nvim/lua/init.lua')
   lua require('init')
 endif
+
+" copilot chat setup
+lua << EOF
+require("CopilotChat").setup {
+  debug = true, -- Enable debugging
+  -- See Configuration section for rest
+}
+EOF

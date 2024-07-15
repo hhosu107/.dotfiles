@@ -107,6 +107,8 @@
 
 [include]
 	path = ~/.gitconfig.local
+[include]
+	path = ~/.gitconfig.company.local
 [gpg]
 	format = ssh
 [includeIf "gitdir:~/company_workspaces/"]
