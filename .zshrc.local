@@ -163,6 +163,8 @@ fi
 
 # Alias ssh to ssh -A so that connection to the remote server allows ssh-agent forwarding
 alias ssh='ssh -A'
+alias scp='scp -A'
+alias rsync='rsync -A'
 
 # yt-dlp shotcut
 alias yt-down="yt-dlp --downloader ffmpeg --no-part"
