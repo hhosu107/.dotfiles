@@ -137,6 +137,12 @@ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/source
 sudo apt-get update && sudo apt-get install yarn
 yarn install
 
+# CLI Browser
+sudo apt install links
+
+# Online judge system
+https://velog.io/@selemium/series/Online-Judge-System
+
 # (Open port of WSL; Reference:
 [here](https://github.com/Alex-D/dotfiles#wsl-bridge))
 
