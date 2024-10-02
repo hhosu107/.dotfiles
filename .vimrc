@@ -307,6 +307,8 @@ try
     inoremap <silent><expr><Esc>
       \ coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#cancel() : "\<Esc>"
 
+    autocmd FileType gitcommit Copilot enable
+
   endif
 
   " Copilot Chat
