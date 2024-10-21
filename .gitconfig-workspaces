@@ -5,4 +5,4 @@
 [includeIf "gitdir:~/workspaces/**"]
   path = ~/workspaces/.gitconfig
 [includeIf "gitdir:~/.dotfiles/**"]
-  path = ~/.dotfiles/.gitconfig
+  path = ~/.dotfiles/.gitconfig-dotfiles
