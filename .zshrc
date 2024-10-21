@@ -254,6 +254,9 @@ if (( $+commands[go] )); then
   export PATH="$PATH:$GOPATH/bin"
 fi
 
+# Golang (debian)
+export PATH="$PATH:/usr/local/go/bin"
+
 #
 # add custom binaries
 #

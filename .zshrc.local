@@ -170,6 +170,8 @@ alias rsync='rsync -A'
 alias yt-down="yt-dlp --downloader ffmpeg --no-part"
 alias yt-down-live="yt-dlp --downloader ffmpeg --no-part --live-from-start"
 
+alias yt-down-live-winbuild="yt-dlp --downloader ffmpeg --no-part --live-from-start --ffmpeg-location /bin/ffmpeg-win"
+
 ## Renew let's encrypt cert
 export lets_encrypt_renew='sudo certbot certonly --manual -d charlese.dev -d "*.charlese.dev" --preferred-challenges dns'
 export certbot_renew='sudo certbot renew'
