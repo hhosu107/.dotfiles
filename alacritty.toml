@@ -1,0 +1,136 @@
+# background opacity
+[env]
+opacity = 0.92
+
+# Campbell (Windows 10 default)
+#
+# Reference:
+#   https://github.com/eendroroy/alacritty-theme/blob/master/themes/campbell.yaml
+[colors.primary]
+  # Default colors
+background = '0x0c0c0c'
+foreground = '0xcccccc'
+
+  # Normal colors
+[colors.normal]
+black =   '0x0c0c0c'
+red =     '0xc50f1f'
+green =   '0x13a10e'
+yellow =  '0xc19c00'
+blue =    '0x0037da'
+magenta = '0x881798'
+cyan =    '0x3a96dd'
+white =   '0xcccccc'
+
+  # Bright colors
+[colors.bright]
+black =   '0x767676'
+red =     '0xe74856'
+green =   '0x16c60c'
+yellow =  '0xf9f1a5'
+blue =    '0x3b78ff'
+magenta = '0xb4009e'
+cyan =    '0x61d6d6'
+white =   '0xf2f2f2'
+
+# Insert shift to paste
+[[keyboard.bindings]]
+chars = "\u001b[2;2~"
+key = "Insert"
+mods = "Shift"
+
+# Insert control to copy
+[[keyboard.bindings]]
+chars = "\u001b[2;5~"
+key = "Insert"
+mods = "Control"
+
+# Delete until whitespace
+[[keyboard.bindings]]
+chars = "\u0017"
+key = "Back"
+mods = "Alt"
+
+# Delete whole line
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+# Move left until whitespace
+[[keyboard.bindings]]
+chars = "\u001b[1;5D"
+key = "Left"
+mods = "Alt"
+
+# Move right until whitespace
+[[keyboard.bindings]]
+chars = "\u001b[1;5C"
+key = "Right"
+mods = "Alt"
+
+# Move to the beginning of the line
+[[keyboard.bindings]]
+chars = "\u001bOH"
+key = "Left"
+mods = "Command"
+
+# Move to the end of the line
+[[keyboard.bindings]]
+chars = "\u001bOF"
+key = "Right"
+mods = "Command"
+
+# Undo on vim
+[[keyboard.bindings]]
+chars = "\u001bu"
+key = "Z"
+mods = "Command"
+
+# Redo on vim
+[[keyboard.bindings]]
+chars = "\u0012"
+key = "Z"
+mods = "Command|Shift"
+
+# Save on vim
+[[keyboard.bindings]]
+chars = "\u001b:w\r"
+key = "S"
+mods = "Command"
+
+# Telescope file finder on vim
+[[keyboard.bindings]]
+chars = "\u001b ff"
+key = "P"
+mods = "Command"
+
+# Telescope live grep on vim
+[[keyboard.bindings]]
+chars = "\u001b fw"
+key = "F"
+mods = "Command|Shift"
+
+
+[[keyboard.bindings]]
+chars = "\u0000"
+key = "Space"
+mods = "Control"
+
+
+[font]
+size = 12.0
+
+[font.normal]
+family = "MesloLGS NF"
+
+[keyboard]
+
+[window]
+option_as_alt = "OnlyLeft"
+
+[general]
+
+import = [
+    "~/.config/alacritty/dracula.toml"
+]

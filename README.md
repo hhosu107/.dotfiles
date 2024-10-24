@@ -70,7 +70,8 @@ ln -s ~/.dotfiles/swaylock ~/.config/swaylock/config
 
 # alacritty
 mkdir -p ~/.config/alacritty
-ln -s ~/.dotfiles/alacritty.yml ~/.config/alacritty/.
+ln -s ~/.dotfiles/alacritty.toml ~/.config/alacritty/.
+ln -s ~/.dotfiles/dracula.yml ~/.config/alacritty/.
 
 # sirula
 mkdir -p ~/.config/sirula
@@ -124,6 +125,10 @@ cargo-install cargo-modules
 
 [nvm](https://github.com/nvm-sh/nvm)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# Locales
+
+sudo dpkg-reconfigure locales -> en_US.UTF-8, ja_JP.UTF-8, ko_KR.UTF-8
 
 # (WSL) Make share directory btwn WSL instances
 mkdir /mnt/wsl/share
