@@ -120,8 +120,9 @@ sudo apt install
 # Install below for using installed binaries
 nodejs curl perl ruby zinit delta g++ iperf
 
-# Install git-delta via cargo
+# Install git-delta via cargo - improves ripgrep.
 cargo install git-delta
+NOTE: upgrade this if ripgrep prints raw json output.
 
 # Install pynvim (for numirias/semshi)
 pip install pynvim --upgrade
