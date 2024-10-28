@@ -107,7 +107,22 @@ cargo install git-delta
 # Install pynvim (for numirias/semshi)
 pip install pynvim --upgrade
 
-neovim via appimage (or use binary for aarch64)
+# Install neovim via appimage (or use binary for aarch64)
+
+```
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage
+
+./nvim.appimage --appimage-extract
+./squashfs-root/AppRun --version
+
+# Optional: exposing nvim globally.
+sudo mv squashfs-root /
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+nvim
+```
+
 Or via [snap](https://snapcraft.io/install/nvim/debian) and symlink via `sudo ln -s =/usr/bin/snap
 /usr/bin/nvim`
 
