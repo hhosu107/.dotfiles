@@ -31,6 +31,8 @@ cp ~/.dotfiles/.zshrc.local ~
 exec zsh
 p10k configure
 
+NOTE: zinit plugins will be installed under ~/.zinit/plugins.
+
 # ssh
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
@@ -48,6 +50,23 @@ ln -sf ~/.dotfiles/.ssh/add_keys.sh ~/.ssh/add_keys.sh
 
 # uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# copilot
+`(eval):1: bad pattern: ^[7^[[?25l^[8^[[0G^[[2K` 문제가 발생할 경우 아래 참고.
+https://github.com/github/gh-copilot/issues/40
+
+@masewo
+
+I "fixed" it by accepting data collection manually. Do you know how I can revert this?
+
+$ gh copilot config
+
+? What would you like to configure?
+> Optional Usage Analytics
+
+? Allow GitHub to collect optional usage data to help us improve? This data does not include your queries.
+> No
+
 
 # gpg
 mkdir -p ~/.gnupg
