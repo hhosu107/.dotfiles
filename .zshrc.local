@@ -18,7 +18,7 @@ alias vi=nvim
 alias vim=nvim
 
 # open multiple files in horizontal splits
-alias nvim='nvim -o'
+# alias nvim='nvim -o'
 
 ## Fix home/end/delete
 bindkey  "^[[H"   beginning-of-line

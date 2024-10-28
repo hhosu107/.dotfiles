@@ -517,7 +517,8 @@ call s:bg('CocHighlightText', s:match_color)
 " Python rootPatterns
 autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 
-
+" Python on neovim
+let g:python3_host_prog = '~/venv/latest/bin/python'
 
 "
 " Define a 'vimrc' augroup

@@ -46,6 +46,9 @@ cp ~/.dotfiles/.gitconfig.local ~
 sudo apt install keychain
 ln -sf ~/.dotfiles/.ssh/add_keys.sh ~/.ssh/add_keys.sh
 
+# uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # gpg
 mkdir -p ~/.gnupg
 cp ~/.dotfiles/gpg-agent.conf ~/.gnupg
