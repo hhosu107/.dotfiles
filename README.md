@@ -171,6 +171,9 @@ sudo dpkg-reconfigure locales -> en_US.UTF-8, ja_JP.UTF-8, ko_KR.UTF-8
 # (WSL) Make share directory btwn WSL instances
 mkdir /mnt/wsl/share
 
+# (WSL) Give docker access to user
+sudo usermod -aG docker $USER
+
 # (yarn install)
 sudo apt remove cmdtest
 sudo apt remove yarn
