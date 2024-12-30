@@ -236,9 +236,6 @@ try
   Plug 'preservim/nerdtree'
   Plug 'tpope/vim-fugitive'
 
-  " Python semantic ide
-  Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
-
   " marp-vim
   Plug 'dhruvasagar/vim-marp'
 
