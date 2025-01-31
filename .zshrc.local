@@ -173,6 +173,8 @@ alias yt-down-live="yt-dlp --downloader ffmpeg --no-part --live-from-start"
 alias yt-down-live-winbuild="yt-dlp -S \"codec:av1\" --downloader ffmpeg --no-part --live-from-start --ffmpeg-location /bin/ffmpeg-win --cookies ~/youtube-cookie.txt "
 alias yt-down-live-winbuild-subtitles="yt-dlp -S \"codec:av1\" --downloader ffmpeg --no-part --live-from-start --ffmpeg-location /bin/ffmpeg-win --cookies ~/youtube-cookie.txt --write-sub --write-auto-sub --sub-lang \"ko.*\""
 
+alias ytarchive-down="./ytarchive --ffmpeg-path /bin/ffmpeg-win -c ~/youtube-cookie.txt"
+
 ## Renew let's encrypt cert
 export lets_encrypt_renew='sudo certbot certonly --manual -d charlese.dev -d "*.charlese.dev" --preferred-challenges dns'
 export certbot_renew='sudo certbot renew'
