@@ -216,6 +216,9 @@ try
   " Black (Python formatter)
   " Plug 'psf/black', { 'branch': 'stable', 'do': 'yarn install --frozen-lockfile'}
 
+  " semshi
+  Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+
   " Blink
   Plug 'farmergreg/vim-lastplace'
   Plug 'rhysd/clever-f.vim'

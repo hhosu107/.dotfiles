@@ -127,6 +127,8 @@ NOTE: upgrade this if ripgrep prints raw json output.
 # Install pynvim (for numirias/semshi)
 pip install pynvim --upgrade
 
+Enter `:UpdateRemotePlugins` in nvim to install remote plugins.
+
 # Install neovim via appimage (or use binary for aarch64)
 
 ```
