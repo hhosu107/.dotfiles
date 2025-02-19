@@ -1,6 +1,3 @@
-# background opacity
-[env]
-opacity = 0.92
 
 # Campbell (Windows 10 default)
 #
@@ -127,6 +124,8 @@ family = "MesloLGS NF"
 [keyboard]
 
 [window]
+# background opacity
+opacity = 0.92
 option_as_alt = "OnlyLeft"
 
 [general]
