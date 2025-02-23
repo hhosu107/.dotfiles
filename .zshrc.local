@@ -178,6 +178,21 @@ alias ytarchive-down="./ytarchive --ffmpeg-path /bin/ffmpeg-win -c ~/youtube-coo
 ## chzzk streamlink
 # usage: chzzk-down <url> 1080p -o <output>
 # Needs to be executed under the git repo https://github.com/ssogari-dev/Chzzk_Tool/tree/main
+#
+# 아래의 예시 명령어를 이용하면 LIVE/VOD 영상 다운로드도 가능합니다.
+
+# Note: 사용 전 Python과 Streamlink 설치가 필요합니다.
+
+# streamlink "https://chzzk.naver.com/live/{고유ID}" {화질} -o {내보낼 파일 명}
+
+# Streamlink 디렉터리(%APPDATA%\Streamlink\plugins)에 해당 파이썬 파일을 저장하여 주십시오.
+
+
+# metadata	Description
+# {title}	Streaming Title
+# {category}	Streaming Category (usu. Korean)
+# {author}	Channel Name
+
 alias chzzk-down="streamlink --http-header \"NIS_AUT=$NIS_AUT\" --http-header \"NIS_SES=$NIS_SES\""
 
 
