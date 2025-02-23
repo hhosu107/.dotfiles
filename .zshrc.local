@@ -175,6 +175,12 @@ alias yt-down-live-winbuild-subtitles="yt-dlp -S \"codec:av1\" --downloader ffmp
 
 alias ytarchive-down="./ytarchive --ffmpeg-path /bin/ffmpeg-win -c ~/youtube-cookie.txt"
 
+## chzzk streamlink
+# usage: chzzk-down <url> 1080p -o <output>
+# Needs to be executed under the git repo https://github.com/ssogari-dev/Chzzk_Tool/tree/main
+alias chzzk-down="streamlink --http-header \"NIS_AUT=$NIS_AUT\" --http-header \"NIS_SES=$NIS_SES\""
+
+
 ## Renew let's encrypt cert
 export lets_encrypt_renew='sudo certbot certonly --manual -d charlese.dev -d "*.charlese.dev" --preferred-challenges dns'
 export certbot_renew='sudo certbot renew'
