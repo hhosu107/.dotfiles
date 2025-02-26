@@ -330,10 +330,10 @@ try
   Plug 'zbirenbaum/copilot.lua'
 
   " Yay, pass source=true if you want to build from source
-  " Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': { -> avante#build('source=true') }}
-  " autocmd! User avante.nvim lua << EOF
-  " require('avante').setup()
-  " EOF
+  Plug 'yetone/avante.nvim', { 'branch': 'main', 'do': 'make' }
+  set runtimepath+=~/.vim/plugged/plenary.nvim
+  set runtimepath+=~/.vim/plugged/avante.nvim
+  autocmd! User avante.nvim lua require('avante').setup({})
 
   call plug#end()
 
