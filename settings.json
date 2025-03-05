@@ -1,72 +1,137 @@
-// To view the default settings, hold "alt" while clicking on the "Settings" button.
-// For documentation on these settings, see: https://aka.ms/terminal-documentation
-//
-// This file resides at "%LocalAppData%\Microsoft\Windows Terminal". Sync with the
-// commands below:
-//     cp ~/.dotfiles/settings.json ${windowsUserProfile}/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json
-//     cp ${windowsUserProfile}/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json ~/.dotfiles/settings.json
 {
+    "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
-    "profiles": {
-        "defaults": {
-            "fontFace": "CaskaydiaCove NF",
-            "fontSize": 14
+    "actions":
+    [
+        {
+            "command":
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
         },
-        "list": [
+        {
+            "command": "paste",
+            "id": "User.paste",
+            "keys": "ctrl+v"
+        },
+        {
+            "command": "find",
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "command":
             {
-                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        }
+    ],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{cb13e83d-2455-5bb0-9ebd-44fa1fc244fc}",
+    "newTabMenu":
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles":
+    {
+        "defaults":
+        {
+            "colorScheme": "Tango Dark",
+            "font":
+            {
+                "face": "CaskaydiaMono NF"
+            },
+            "backgroundImage": "C:\\Users\\hhosu\\Desktop\\Game\\pjsekai\\card_normal.png",
+            "backgroundImageOpacity": 0.1,
+        },
+        "list":
+        [
+            {
+                "guid": "{cb13e83d-2455-5bb0-9ebd-44fa1fc244fc}",
                 "hidden": false,
-                "name": "Debian",
-                "source": "Windows.Terminal.Wsl",
-                "cursorShape": "filledBox",
-                "startingDirectory": "//wsl$/Debian/home/charlese"
+                "name": "Debian12",
+                "source": "Windows.Terminal.Wsl"
             },
             {
+                "commandline": "C:\\Windows\\system32\\wsl.exe -d Debian12",
+                "guid": "{d80f03f8-062d-4ae4-9576-c67d7cccb77e}",
+                "hidden": false,
+                "name": "Debian"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-                "name": "Windows PowerShell",
-                "commandline": "powershell.exe",
-                "colorScheme": "Campbell Powershell",
-                "cursorShape": "filledBox",
-                "hidden": false
+                "hidden": false,
+                "name": "Windows PowerShell"
             },
             {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
-                "name": "cmd",
-                "commandline": "cmd.exe",
-                "cursorShape": "filledBox",
-                "hidden": false
+                "hidden": false,
+                "name": "\uba85\ub839 \ud504\ub86c\ud504\ud2b8"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": true,
+                "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{17bf3de4-5353-5709-bcf9-835bd952a95e}",
+                "hidden": false,
+                "name": "Ubuntu-22.04",
+                "source": "Windows.Terminal.Wsl"
+            },
+            {
+                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+                "hidden": false,
+                "name": "PowerShell",
+                "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "commandline": "C:\\Program Files\\WindowsApps\\Microsoft.PowerShell_7.4.3.0_x64__8wekyb3d8bbwe\\pwsh.exe",
+                "guid": "{49256050-eb61-408a-9286-93145ae4112c}",
+                "hidden": false,
+                "name": "Powershell Core"
+            },
+            {
+                "guid": "{4ff56d04-d9cf-57ea-bae2-ad396374e7e3}",
+                "hidden": false,
+                "name": "Ubuntu 22.04.5 LTS",
+                "source": "CanonicalGroupLimited.Ubuntu22.04LTS_79rhkp1fndgsc"
             }
         ]
     },
-
-    // Add custom color schemes to this array
     "schemes": [],
-
+    "themes": []
     // Add any keybinding overrides to this array.
     // To unbind a default keybinding, set the command to "unbound"
-    "keybindings": [
-        { "command": { "action": "switchToTab", "index": 0 }, "keys": "ctrl+1" },
-        { "command": { "action": "switchToTab", "index": 1 }, "keys": "ctrl+2" },
-        { "command": { "action": "switchToTab", "index": 2 }, "keys": "ctrl+3" },
-        { "command": { "action": "switchToTab", "index": 3 }, "keys": "ctrl+4" },
-        { "command": { "action": "switchToTab", "index": 4 }, "keys": "ctrl+5" },
-        { "command": { "action": "switchToTab", "index": 5 }, "keys": "ctrl+6" },
-        { "command": { "action": "switchToTab", "index": 6 }, "keys": "ctrl+7" },
-        { "command": { "action": "switchToTab", "index": 7 }, "keys": "ctrl+8" },
-        { "command": { "action": "switchToTab", "index": 8 }, "keys": "ctrl+9" },
-        { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "ctrl+-" },
-        { "command": { "action": "splitPane", "split": "vertical" }, "keys": "ctrl+\\" },
-        { "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+shift+-" },
-        { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+[" },
-        { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+]" },
-        { "command": "unbound", "keys": "alt+left" },
-        { "command": "unbound", "keys": "alt+right" }
-    ]
+    "// keybindings
+    //  { "command": { "action": "switchToTab", "index": 0 }, "keys": "ctrl+1" },
+    //  { "command": { "action": "switchToTab", "index": 1 }, "keys": "ctrl+2" },
+    //  { "command": { "action": "switchToTab", "index": 2 }, "keys": "ctrl+3" },
+    //  { "command": { "action": "switchToTab", "index": 3 }, "keys": "ctrl+4" },
+    //  { "command": { "action": "switchToTab", "index": 4 }, "keys": "ctrl+5" },
+    //  { "command": { "action": "switchToTab", "index": 5 }, "keys": "ctrl+6" },
+    //  { "command": { "action": "switchToTab", "index": 6 }, "keys": "ctrl+7" },
+    //  { "command": { "action": "switchToTab", "index": 7 }, "keys": "ctrl+8" },
+    //  { "command": { "action": "switchToTab", "index": 8 }, "keys": "ctrl+9" },
+    //  { "command": { "action": "splitPane", "split": "horizontal" }, "keys": "ctrl+-" },
+    //  { "command": { "action": "splitPane", "split": "vertical" }, "keys": "ctrl+\\" },
+    //  { "command": { "action": "adjustFontSize", "delta": -1 }, "keys": "ctrl+shift+-" },
+    //  { "command": { "action": "moveFocus", "direction": "left" }, "keys": "alt+[" },
+    //  { "command": { "action": "moveFocus", "direction": "right" }, "keys": "alt+]" },
+    //  { "command": "unbound", "keys": "alt+left" },
+    //  { "command": "unbound", "keys": "alt+right" }
+    //]
 }
