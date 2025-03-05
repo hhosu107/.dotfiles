@@ -133,6 +133,10 @@ Enter `:UpdateRemotePlugins` in nvim to install remote plugins.
 
 ```
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+- arm64 instance
+curl -LO https://github.com/neovim/neovim/releases/latest/nvim-linux-arm64.appimage
+- x86-64 instance
+curl -LO https://github.com/neovim/neovim/releases/latest/nvim-linux-x86_64.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage
 
